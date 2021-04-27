@@ -20,7 +20,7 @@ spec:
         image: shinobicctv/shinobi
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 8090
         env:
         - name: APP_BRANCH
           value: master
@@ -60,7 +60,7 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 8090
 
 ---
 apiVersion: extensions/v1beta1
@@ -78,4 +78,4 @@ spec:
         - path: /
           backend:
             serviceName: shinobi
-            servicePort: 8080
+            servicePort: 8090
