@@ -71,6 +71,8 @@ metadata:
   annotations:
     allow.http: "false"
 spec:
+  selector:
+    app: shinobi
   rules:
   - host: shinobi.rancher.tpt.truckpad.io
     http:
