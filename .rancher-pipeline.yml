@@ -1,0 +1,11 @@
+stages:
+- name: deploy-ns
+  steps:
+  - applyYamlConfig:
+      path: ./ns.yaml
+  - applyYamlConfig:
+      path: ./storage.yaml
+  - applyYamlConfig:
+      path: ./shinobi.yaml
+timeout: 60
+notification: {}
