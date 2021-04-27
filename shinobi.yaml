@@ -69,10 +69,8 @@ metadata:
   namespace: shinobi
   name: shinobi
   annotations:
-    allow.http: "false"
+    cloud.google.com/neg: '{"ingress": true}'
 spec:
-  selector:
-    app: shinobi
   rules:
   - host: shinobi.rancher.tpt.truckpad.io
     http:
